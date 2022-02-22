@@ -4,28 +4,30 @@ public class EmployeWage {
         public static final int FULL_TIME=1;
         public static final int PART_TIME=2;
         public static final int EMP_WAGE_PER_HR=20;
+        public static final int MAX_WORKING_DAYS=20;
 
     public static void main(String[] args) {
         int empHr=0;
         int empWage=0;
+        int totalWorkingDays=1,totalEmpWage=0;
 	    System.out.println("Welcome to Employee Wage Computation Program");
 
-            int Empcheck=(int)(Math.random()*10) % 3;
+            for(totalWorkingDays=1;totalWorkingDays<=MAX_WORKING_DAYS;totalWorkingDays++) {
+                int Empcheck = (int) (Math.random() * 10) % 3;
 
-        switch (Empcheck){
-            case 1:
-                System.out.println("Employee is working Full Time");
-                empHr=8;
-                break;
-            case 2:
-                System.out.println("Employee is working Part Time");
-                empHr=4;
-                break;
-            default:
-                System.out.println("Employee is absent");
-        }
+                switch (Empcheck) {
+                    case 1:
+                        empHr = 8;
+                        break;
+                    case 2:
+                        empHr = 4;
+                        break;
+                    default:
+                }
 
-            empWage=empHr*EMP_WAGE_PER_HR;
-        System.out.println("Employe's wage is " + empWage);
+                empWage = empHr * EMP_WAGE_PER_HR;
+                totalEmpWage =+ empWage+totalEmpWage;
+            }
+            System.out.println("Employe's Monthly wage is " + totalEmpWage);
     }
 }
