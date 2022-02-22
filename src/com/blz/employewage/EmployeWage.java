@@ -5,7 +5,7 @@ public class EmployeWage {
         public static final int PART_TIME=2;
         public static final int EMP_WAGE_PER_HR=20;
         public static final int MAX_WORKING_DAYS=20;
-        public static final int MAX_WORKING_HrS=100;
+        public static final int MAX_WORKING_HRS=100;
         public static final int PROBLEMATIC_SCENARIO=36;
     public static void main(String[] args) {
         int empHr=0;
@@ -13,7 +13,7 @@ public class EmployeWage {
         int totalWorkingDays=0,totalEmpHrs=0,totalEmpWage=0;
 	    System.out.println("Welcome to Employee Wage Computation Program");
 
-        while(totalEmpHrs < MAX_WORKING_HrS && totalWorkingDays < MAX_WORKING_DAYS)
+        while(totalEmpHrs < MAX_WORKING_HRS && totalWorkingDays < MAX_WORKING_DAYS)
         {
             if (totalEmpHrs==PROBLEMATIC_SCENARIO) {
                 empCheck = PART_TIME;
