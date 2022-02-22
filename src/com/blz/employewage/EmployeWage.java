@@ -13,11 +13,11 @@ public class EmployeWage {
             int Empcheck=(int)(Math.random()*10) % 3;
 
         switch (Empcheck){
-            case 1:
+            case FULL_TIME:
                 System.out.println("Employee is working Full Time");
                 empHr=8;
                 break;
-            case 2:
+            case PART_TIME:
                 System.out.println("Employee is working Part Time");
                 empHr=4;
                 break;
